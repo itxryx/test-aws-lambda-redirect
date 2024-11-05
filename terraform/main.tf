@@ -24,7 +24,7 @@ resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
 }
 
 resource "aws_lambda_function" "redirect_function" {
-  filename         = "function.zip"
+  filename         = "../function.zip"
   function_name    = "test-lambda-redirect"
   role             = aws_iam_role.lambda_role.arn
   handler          = "index.handler"
